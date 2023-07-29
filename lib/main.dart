@@ -1,10 +1,13 @@
 import 'package:ecommerce_app/core/constants/app_colors.dart';
 import 'package:ecommerce_app/core/constants/app_routes.dart';
+import 'package:ecommerce_app/core/services/app_serices.dart';
 import 'package:ecommerce_app/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initServices();
   runApp(const MyApp());
 }
 
