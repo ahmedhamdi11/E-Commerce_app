@@ -14,14 +14,9 @@ class LocalizationController extends GetxController {
 
   @override
   void onInit() {
-    String? langFromPrefs = appServices.prefs.getString('lang');
-    if (langFromPrefs == 'ar') {
-      locale = const Locale('ar');
-    } else if (langFromPrefs == 'en') {
-      locale = const Locale('en');
-    } else {
-      locale = Locale(Get.deviceLocale!.languageCode);
-    }
+    String langCode =
+        appServices.prefs.getString('lang') ?? Get.deviceLocale!.languageCode;
+    locale = Locale(langCode);
     super.onInit();
   }
 }

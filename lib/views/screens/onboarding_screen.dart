@@ -39,7 +39,7 @@ class OnBoardingScreens extends StatelessWidget {
                 onTap: () {
                   onBoardingController.goToNextPage();
                 },
-                btnText: 'continue',
+                btnText: 'continue'.tr,
               ),
 
               // skip button
@@ -47,7 +47,7 @@ class OnBoardingScreens extends StatelessWidget {
                 onPressed: () {
                   onBoardingController.skipOnBoarding();
                 },
-                child: const Text('Skip'),
+                child: Text('skip'.tr),
               ),
 
               const SizedBox(
