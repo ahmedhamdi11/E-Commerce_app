@@ -6,7 +6,8 @@ abstract class Styles {
     fontSize: 18,
   );
 
-  static const bodyGrey = TextStyle(
+  static const bodyGrey14 = TextStyle(
     color: AppColors.greyColor,
+    fontSize: 14,
   );
 }

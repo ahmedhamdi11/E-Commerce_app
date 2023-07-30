@@ -15,7 +15,7 @@ class OnBoardingScreens extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 22.0,
+            horizontal: 18.0,
           ),
           child: Column(
             children: [

@@ -47,7 +47,7 @@ class OnBoardingPageView extends StatelessWidget {
             Text(
               onBoardingData[index].body,
               textAlign: TextAlign.center,
-              style: Styles.bodyGrey,
+              style: Styles.bodyGrey14,
             ),
           ],
         );
