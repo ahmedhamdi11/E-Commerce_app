@@ -5,7 +5,8 @@ class AppTranslations extends Translations {
   Map<String, Map<String, String>> get keys => {
         // arabic translations
         'ar': {
-          // onboarding titls ar
+          // onboarding ar translation
+          // onboarding titls
           'title_1': 'اختر منتجاتك',
           'title_2': 'دفع سهل وآمن',
           'title_3': 'أتبع طلبك',
@@ -21,9 +22,21 @@ class AppTranslations extends Translations {
           'body_4':
               'موثوقة وسرعة التسليم. نقوم بتسليم منتجك بأسرع طريقة ممكنة.',
 
-          ////////////
+          //
           'continue': 'استمر',
           'skip': 'تخطي',
+
+          // auth ar translations
+          'sign_in': 'تسجيل الدخول',
+          'signin_1': 'مرحبًا بعودتك',
+          'signin_2':
+              'قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو بستخدام وسائل التواصل الاجتماعي',
+          'signin_3': 'أدخل بريدك الإلكتروني',
+          'singnin_4': 'ادخل كلمة السر',
+          'email': 'البريد الإلكتروني',
+          'password': 'كلمة السر',
+          'forgot_password': 'هل نسيت كلمة السر؟',
+          'click_here': 'اضغط هنا',
         },
 
         // english translations
@@ -47,9 +60,22 @@ class AppTranslations extends Translations {
           'body_4':
               'Reliable And Fast Delivery. We Deliver your product the fastest way possible.',
 
-          ////////////
+          //
           'continue': 'Continue',
           'skip': 'Skip',
+
+          // auth en translations
+          'sign_in': 'Sign In',
+          'signin_1': 'Welcome Back',
+          'signin_2':
+              'Sign in with your email and password\n or continue with social media',
+          'signin_3': 'Enter your email',
+          'singnin_4': 'enter your password',
+
+          'email': 'Email',
+          'password': 'Password',
+          'forgot_password': 'Forgot your password?',
+          'click_here': 'Click here',
         },
       };
 }
