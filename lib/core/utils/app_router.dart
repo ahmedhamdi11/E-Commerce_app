@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/views/screens/auth/forget_password_screen.dart';
+import 'package:ecommerce_app/views/screens/auth/otp_screen.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 
@@ -11,6 +12,7 @@ abstract class AppRouter {
   static const signInScreenRoute = '/signInScreen';
   static const signUpScreenRoute = '/signUpScreen';
   static const forgetPasswordScreenRoute = '/forgetPasswordScreen';
+  static const otpScreenRoute = '/otpScreen';
 
   static List<GetPage<dynamic>> getPages = [
     GetPage(
@@ -30,6 +32,11 @@ abstract class AppRouter {
     GetPage(
       name: forgetPasswordScreenRoute,
       page: () => const ForgetPasswordScreen(),
+      transition: Transition.rightToLeftWithFade,
+    ),
+    GetPage(
+      name: otpScreenRoute,
+      page: () => const OTPScreen(),
       transition: Transition.rightToLeftWithFade,
     ),
   ];

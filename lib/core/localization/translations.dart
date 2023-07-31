@@ -48,6 +48,8 @@ class AppTranslations extends Translations {
               'قم بالتسجيل باستخدام \n بريدك الإلكتروني وكلمة المرور لتبدأ',
           'eter_your_email_to_reset_password':
               'أدخل عنوان بريدك الإلكتروني \n لإعادة تعيين كلمة السر الخاصة بك',
+          'verify_your_email': 'قم بتأكيد بريدك الألكتروني',
+          'otp_body_text': 'الرجاء إدخال الكود \n المرسل إلي',
         },
 
         // english translations
@@ -96,6 +98,8 @@ class AppTranslations extends Translations {
           'signup_2': 'Sign up with your email and passowrd \n to get started',
           'eter_your_email_to_reset_password':
               'Enter your email adress  to \n reset your password',
+          'verify_your_email': 'Verify your email',
+          'otp_body_text': 'Please enter the digit code \n sent to ',
         },
       };
 }
