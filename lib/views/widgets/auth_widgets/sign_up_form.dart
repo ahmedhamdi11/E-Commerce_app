@@ -17,16 +17,16 @@ class SignUpForm extends StatelessWidget {
       child: Column(
         children: [
           // sign in text title
-          const Text(
-            'Sign Up Now',
+          Text(
+            'signup_1'.tr,
             style: Styles.title18,
           ),
 
           const SizedBox(height: 8.0),
 
           // sign in text body
-          const Text(
-            'Sign up with your email and passowrd \n to get started',
+          Text(
+            'signup_2'.tr,
             style: Styles.bodyGrey14,
             textAlign: TextAlign.center,
           ),
@@ -34,11 +34,11 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(height: 68.0),
 
           // username field
-          const DefaultTextField(
-            hint: 'Enter your username',
-            labelText: 'Username',
+          DefaultTextField(
+            hint: 'enter_your_username'.tr,
+            labelText: 'username'.tr,
             keyboardType: TextInputType.emailAddress,
-            suffix: Icon(
+            suffix: const Icon(
               Icons.person_outline,
               color: AppColors.greyColor,
             ),
@@ -60,11 +60,11 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(height: 16.0),
 
           // phone number field
-          const DefaultTextField(
-            hint: 'Enter your phone number',
-            labelText: 'Phone number',
+          DefaultTextField(
+            hint: 'enter_your_phone'.tr,
+            labelText: 'phone_number'.tr,
             keyboardType: TextInputType.emailAddress,
-            suffix: Icon(
+            suffix: const Icon(
               Icons.phone_android,
               color: AppColors.greyColor,
             ),
@@ -89,8 +89,10 @@ class SignUpForm extends StatelessWidget {
           // sign in button
           DefaultButton(
             onTap: () {},
-            btnText: 'Sign Up',
+            btnText: 'sign_up'.tr,
           ),
+
+          const SizedBox(height: 8.0),
         ],
       ),
     );

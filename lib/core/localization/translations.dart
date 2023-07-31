@@ -39,6 +39,14 @@ class AppTranslations extends Translations {
           'click_here': 'اضغط هنا',
           'dont_have_an_account': 'ليس لديك حساب؟',
           'sign_up': 'سجل الان',
+          'enter_your_phone': 'أدخل رقم هاتفك',
+          'phone_number': 'رقم الهاتف',
+          'username': 'اسم المستخدم',
+          'enter_your_username': 'أدخل اسم المستخدم الخاص بك',
+          'signup_1': 'أنشا حساب الأن',
+
+          'signup_2':
+              'قم بالتسجيل باستخدام \n بريدك الإلكتروني وكلمة المرور لتبدأ',
         },
 
         // english translations
@@ -80,6 +88,12 @@ class AppTranslations extends Translations {
           'click_here': 'Click here',
           'dont_have_an_account': 'Don\'t have an account?',
           'sign_up': 'Sign Up',
+          'enter_your_phone': 'Enter your phone number',
+          'phone_number': 'Phone number',
+          'username': 'Username',
+          'enter_your_username': 'Enter your username',
+          'signup_1': 'Sign Up Now',
+          'signup_2': 'Sign up with your email and passowrd \n to get started',
         },
       };
 }
