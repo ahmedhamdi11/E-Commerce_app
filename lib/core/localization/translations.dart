@@ -44,9 +44,10 @@ class AppTranslations extends Translations {
           'username': 'اسم المستخدم',
           'enter_your_username': 'أدخل اسم المستخدم الخاص بك',
           'signup_1': 'أنشا حساب الأن',
-
           'signup_2':
               'قم بالتسجيل باستخدام \n بريدك الإلكتروني وكلمة المرور لتبدأ',
+          'eter_your_email_to_reset_password':
+              'أدخل عنوان بريدك الإلكتروني \n لإعادة تعيين كلمة السر الخاصة بك',
         },
 
         // english translations
@@ -81,7 +82,6 @@ class AppTranslations extends Translations {
               'Sign in with your email and password\n or continue with social media',
           'signin_3': 'Enter your email',
           'singnin_4': 'enter your password',
-
           'email': 'Email',
           'password': 'Password',
           'forgot_password': 'Forgot your password?',
@@ -94,6 +94,8 @@ class AppTranslations extends Translations {
           'enter_your_username': 'Enter your username',
           'signup_1': 'Sign Up Now',
           'signup_2': 'Sign up with your email and passowrd \n to get started',
+          'eter_your_email_to_reset_password':
+              'Enter your email adress  to \n reset your password',
         },
       };
 }

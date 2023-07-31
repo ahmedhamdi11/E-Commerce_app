@@ -68,7 +68,7 @@ class SignInForm extends StatelessWidget {
                 style: Styles.bodyGrey14,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () => signInController.goToForgetPasswordScreen(),
                 child: Text('click_here'.tr),
               ),
             ],
