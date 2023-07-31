@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -34,7 +35,9 @@ class OtpController extends GetxController {
   // verify the otp code
   void verifyCode() {
     if (formKey.currentState!.validate()) {
-      Get.defaultDialog(content: Text('otp code is : $otpCode'));
+      // verify code first ...
+      // if it is verified then go to the reset password screen
+      Get.offNamed(AppRouter.resetPasswordScreenRoute);
     } else {
       autovalidateMode = AutovalidateMode.always;
       update();

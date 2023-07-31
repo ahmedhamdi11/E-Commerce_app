@@ -23,7 +23,7 @@ class AppTranslations extends Translations {
               'موثوقة وسرعة التسليم. نقوم بتسليم منتجك بأسرع طريقة ممكنة.',
 
           //
-          'continue': 'استمر',
+          'continue': 'اشطا',
           'skip': 'تخطي',
 
           // auth ar translations
@@ -50,6 +50,11 @@ class AppTranslations extends Translations {
               'أدخل عنوان بريدك الإلكتروني \n لإعادة تعيين كلمة السر الخاصة بك',
           'verify_your_email': 'قم بتأكيد بريدك الألكتروني',
           'otp_body_text': 'الرجاء إدخال الكود \n المرسل إلي',
+          'reset_password': 'اعد ضبط كلمه السر',
+          'new_password': 'كلمة السر الجديدة',
+          'new_password_hint': 'أدخل كلمة السر الجديدة',
+          'confirm_password_hint': 'أدخل كلمة السر الجديدة مرة أخرى',
+          'confirm_password': 'أكد كلمة السر',
         },
 
         // english translations
@@ -100,6 +105,11 @@ class AppTranslations extends Translations {
               'Enter your email adress  to \n reset your password',
           'verify_your_email': 'Verify your email',
           'otp_body_text': 'Please enter the digit code \n sent to ',
+          'reset_password': 'Reset your password',
+          'new_password': 'New Password',
+          'new_password_hint': 'Enter your new password',
+          'confirm_password_hint': 'Enter your new password again',
+          'confirm_password': 'Confirm Password',
         },
       };
 }
