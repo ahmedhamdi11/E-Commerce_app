@@ -1,4 +1,3 @@
-import 'package:ecommerce_app/controllers/auth_controllers/sign_in_controller.dart';
 import 'package:ecommerce_app/core/constants/app_colors.dart';
 import 'package:ecommerce_app/core/shared/components/default_button.dart';
 import 'package:ecommerce_app/core/shared/components/default_text_field.dart';
@@ -6,34 +5,46 @@ import 'package:ecommerce_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SignInForm extends StatelessWidget {
-  const SignInForm({
+class SignUpForm extends StatelessWidget {
+  const SignUpForm({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    SignInController signInController = Get.put(SignInController());
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: Column(
         children: [
           // sign in text title
-          Text(
-            'signin_1'.tr,
+          const Text(
+            'Sign Up Now',
             style: Styles.title18,
           ),
 
           const SizedBox(height: 8.0),
 
           // sign in text body
-          Text(
-            'signin_2'.tr,
+          const Text(
+            'Sign up with your email and passowrd \n to get started',
             style: Styles.bodyGrey14,
             textAlign: TextAlign.center,
           ),
 
           const SizedBox(height: 68.0),
+
+          // username field
+          const DefaultTextField(
+            hint: 'Enter your username',
+            labelText: 'Username',
+            keyboardType: TextInputType.emailAddress,
+            suffix: Icon(
+              Icons.person_outline,
+              color: AppColors.greyColor,
+            ),
+          ),
+
+          const SizedBox(height: 16.0),
 
           // email field
           DefaultTextField(
@@ -42,6 +53,19 @@ class SignInForm extends StatelessWidget {
             keyboardType: TextInputType.emailAddress,
             suffix: const Icon(
               Icons.email_outlined,
+              color: AppColors.greyColor,
+            ),
+          ),
+
+          const SizedBox(height: 16.0),
+
+          // phone number field
+          const DefaultTextField(
+            hint: 'Enter your phone number',
+            labelText: 'Phone number',
+            keyboardType: TextInputType.emailAddress,
+            suffix: Icon(
+              Icons.phone_android,
               color: AppColors.greyColor,
             ),
           ),
@@ -60,45 +84,12 @@ class SignInForm extends StatelessWidget {
             ),
           ),
 
-          // forgot password row
-          Row(
-            children: [
-              Text(
-                'forgot_password'.tr,
-                style: Styles.bodyGrey14,
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text('click_here'.tr),
-              ),
-            ],
-          ),
-
-          const SizedBox(height: 12.0),
+          const SizedBox(height: 28.0),
 
           // sign in button
           DefaultButton(
             onTap: () {},
-            btnText: 'sign_in'.tr,
-          ),
-
-          const SizedBox(
-            height: 32.0,
-          ),
-
-          // sign up button
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'dont_have_an_account'.tr,
-                style: Styles.bodyGrey14,
-              ),
-              TextButton(
-                onPressed: () => signInController.goToSignUpScreen(),
-                child: Text('sign_up'.tr),
-              ),
-            ],
+            btnText: 'Sign Up',
           ),
         ],
       ),

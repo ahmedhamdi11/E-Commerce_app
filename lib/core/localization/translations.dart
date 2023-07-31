@@ -37,6 +37,8 @@ class AppTranslations extends Translations {
           'password': 'كلمة السر',
           'forgot_password': 'هل نسيت كلمة السر؟',
           'click_here': 'اضغط هنا',
+          'dont_have_an_account': 'ليس لديك حساب؟',
+          'sign_up': 'سجل الان',
         },
 
         // english translations
@@ -76,6 +78,8 @@ class AppTranslations extends Translations {
           'password': 'Password',
           'forgot_password': 'Forgot your password?',
           'click_here': 'Click here',
+          'dont_have_an_account': 'Don\'t have an account?',
+          'sign_up': 'Sign Up',
         },
       };
 }
