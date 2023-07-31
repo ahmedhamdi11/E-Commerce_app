@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/controllers/onboarding_controller.dart';
-import 'package:ecommerce_app/core/shared/components/default_button.dart';
+import 'package:ecommerce_app/core/shared/widgets/default_button.dart';
 import 'package:ecommerce_app/views/widgets/onboarding/onboarding_page_indicator.dart';
 import 'package:ecommerce_app/views/widgets/onboarding/onboarding_page_view.dart';
 import 'package:flutter/material.dart';

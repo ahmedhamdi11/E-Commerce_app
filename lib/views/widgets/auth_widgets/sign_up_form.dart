@@ -1,6 +1,6 @@
-import 'package:ecommerce_app/core/constants/app_colors.dart';
-import 'package:ecommerce_app/core/shared/components/default_button.dart';
-import 'package:ecommerce_app/core/shared/components/default_text_field.dart';
+import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
+import 'package:ecommerce_app/core/shared/widgets/default_button.dart';
+import 'package:ecommerce_app/core/shared/widgets/default_text_field.dart';
 import 'package:ecommerce_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,7 +37,6 @@ class SignUpForm extends StatelessWidget {
           DefaultTextField(
             hint: 'enter_your_username'.tr,
             labelText: 'username'.tr,
-            keyboardType: TextInputType.emailAddress,
             suffix: const Icon(
               Icons.person_outline,
               color: AppColors.greyColor,
@@ -63,7 +62,7 @@ class SignUpForm extends StatelessWidget {
           DefaultTextField(
             hint: 'enter_your_phone'.tr,
             labelText: 'phone_number'.tr,
-            keyboardType: TextInputType.emailAddress,
+            keyboardType: TextInputType.phone,
             suffix: const Icon(
               Icons.phone_android,
               color: AppColors.greyColor,
@@ -77,7 +76,6 @@ class SignUpForm extends StatelessWidget {
             isPassword: true,
             hint: 'singnin_4'.tr,
             labelText: 'password'.tr,
-            keyboardType: TextInputType.emailAddress,
             suffix: const Icon(
               Icons.lock_open_outlined,
               color: AppColors.greyColor,

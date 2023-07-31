@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/constants/app_assets.dart';
+import 'package:ecommerce_app/core/utils/constants/app_assets.dart';
 import 'package:ecommerce_app/views/widgets/auth_widgets/sign_in_form.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';

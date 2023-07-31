@@ -1,9 +1,8 @@
 import 'package:ecommerce_app/controllers/localization_controller.dart';
-import 'package:ecommerce_app/core/constants/app_colors.dart';
-import 'package:ecommerce_app/core/constants/app_routes.dart';
+import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
 import 'package:ecommerce_app/core/localization/translations.dart';
 import 'package:ecommerce_app/core/services/app_serices.dart';
-import 'package:ecommerce_app/routes.dart';
+import 'package:ecommerce_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     LocalizationController controller = Get.put(LocalizationController());
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'e-commerce',
       translations: AppTranslations(),
       locale: controller.locale,
@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Jannah',
       ),
-      initialRoute: AppRoutes.onBoardingRoute,
-      routes: routes,
+      initialRoute: AppRouter.onBoardingRoute,
+      getPages: AppRouter.getPages,
     );
   }
 }

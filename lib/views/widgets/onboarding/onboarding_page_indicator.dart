@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/constants/app_colors.dart';
+import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
 import 'package:ecommerce_app/data/data_source/static/static_data.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

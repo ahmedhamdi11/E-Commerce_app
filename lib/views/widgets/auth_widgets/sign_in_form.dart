@@ -1,7 +1,7 @@
 import 'package:ecommerce_app/controllers/auth_controllers/sign_in_controller.dart';
-import 'package:ecommerce_app/core/constants/app_colors.dart';
-import 'package:ecommerce_app/core/shared/components/default_button.dart';
-import 'package:ecommerce_app/core/shared/components/default_text_field.dart';
+import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
+import 'package:ecommerce_app/core/shared/widgets/default_button.dart';
+import 'package:ecommerce_app/core/shared/widgets/default_text_field.dart';
 import 'package:ecommerce_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

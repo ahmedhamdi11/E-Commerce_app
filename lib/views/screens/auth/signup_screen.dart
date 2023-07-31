@@ -1,5 +1,5 @@
-import 'package:ecommerce_app/core/constants/app_assets.dart';
-import 'package:ecommerce_app/core/shared/components/default_back_button.dart';
+import 'package:ecommerce_app/core/utils/constants/app_assets.dart';
+import 'package:ecommerce_app/core/shared/widgets/default_back_button.dart';
 import 'package:ecommerce_app/views/widgets/auth_widgets/sign_up_form.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -15,6 +15,7 @@ class SignUpScreen extends StatelessWidget {
       body: Column(
         children: [
           Stack(
+            alignment: Alignment.topLeft,
             children: [
               Lottie.asset(
                 AppAssets.waveBackground,

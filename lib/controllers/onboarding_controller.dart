@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/constants/app_routes.dart';
+import 'package:ecommerce_app/core/utils/app_router.dart';
 import 'package:ecommerce_app/data/data_source/static/static_data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,7 +9,7 @@ class OnBoardingController extends GetxController {
 
   void goToNextPage() {
     if (isLastPage) {
-      Get.offAllNamed(AppRoutes.loginScreenRoute);
+      Get.offAllNamed(AppRouter.signInScreenRoute);
     } else {
       pageController.nextPage(
         duration: const Duration(milliseconds: 500),
@@ -19,7 +19,7 @@ class OnBoardingController extends GetxController {
   }
 
   void skipOnBoarding() {
-    Get.offAllNamed(AppRoutes.loginScreenRoute);
+    Get.offAllNamed(AppRouter.signInScreenRoute);
   }
 
   @override

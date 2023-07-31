@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/constants/app_colors.dart';
+import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
 import 'package:ecommerce_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +39,7 @@ class DefaultTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.0),
         ),
         suffixIcon: Padding(
-          padding: const EdgeInsets.only(right: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: suffix,
         ),
         suffixIconConstraints: const BoxConstraints(maxHeight: 42),

@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/core/constants/app_assets.dart';
+import 'package:ecommerce_app/core/utils/constants/app_assets.dart';
 import 'package:ecommerce_app/data/models/onboarding_model.dart';
 import 'package:get/get.dart';
 
