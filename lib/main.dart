@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/controllers/localization_controller.dart';
-import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
+import 'package:ecommerce_app/core/utils/app_themes.dart';
 import 'package:ecommerce_app/core/localization/translations.dart';
 import 'package:ecommerce_app/core/services/app_serices.dart';
 import 'package:ecommerce_app/core/utils/app_router.dart';
@@ -25,11 +25,8 @@ class MyApp extends StatelessWidget {
       title: 'e-commerce',
       translations: AppTranslations(),
       locale: controller.locale,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
-        useMaterial3: true,
-        fontFamily: 'Jannah',
-      ),
+      theme: AppThemes.lightTheme,
+      darkTheme: AppThemes.darkTheme,
       initialRoute: AppRouter.onBoardingRoute,
       getPages: AppRouter.getPages,
     );
