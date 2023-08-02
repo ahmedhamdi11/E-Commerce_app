@@ -29,22 +29,18 @@ abstract class AppRouter {
     GetPage(
       name: signUpScreenRoute,
       page: () => const SignUpScreen(),
-      transition: Transition.rightToLeftWithFade,
     ),
     GetPage(
       name: forgetPasswordScreenRoute,
       page: () => const ForgetPasswordScreen(),
-      transition: Transition.rightToLeftWithFade,
     ),
     GetPage(
       name: otpScreenRoute,
       page: () => const OTPScreen(),
-      transition: Transition.rightToLeftWithFade,
     ),
     GetPage(
       name: resetPasswordScreenRoute,
       page: () => const ResetPasswordScreen(),
-      transition: Transition.rightToLeftWithFade,
     ),
   ];
 }

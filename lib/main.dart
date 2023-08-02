@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     LocalizationController controller = Get.put(LocalizationController());
     return GetMaterialApp(
+      defaultTransition: Transition.rightToLeftWithFade,
       debugShowCheckedModeBanner: false,
       title: 'e-commerce',
       translations: AppTranslations(),

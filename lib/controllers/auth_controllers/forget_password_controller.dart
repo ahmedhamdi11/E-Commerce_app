@@ -5,4 +5,11 @@ class ForgetPasswordController extends GetxController {
   void gotToOtpScreen() {
     Get.toNamed(AppRouter.otpScreenRoute, arguments: true);
   }
+
+  // navigate to the forget password screen
+  void goToForgetPasswordScreen() {
+    Get.toNamed(
+      AppRouter.forgetPasswordScreenRoute,
+    );
+  }
 }

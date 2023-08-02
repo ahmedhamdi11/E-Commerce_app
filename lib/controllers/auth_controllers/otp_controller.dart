@@ -59,7 +59,10 @@ class OtpController extends GetxController {
       );
 
       // go to sing in screen
-      Get.offAllNamed(AppRouter.signInScreenRoute);
+      Get.offNamedUntil(
+        AppRouter.signInScreenRoute,
+        (route) => false,
+      );
     } else {
       autovalidateMode = AutovalidateMode.always;
       update();

@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/controllers/auth_controllers/forget_password_controller.dart';
 import 'package:ecommerce_app/controllers/auth_controllers/sign_in_controller.dart';
 import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
 import 'package:ecommerce_app/core/shared/widgets/default_button.dart';
@@ -13,6 +14,8 @@ class SignInForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ForgetPasswordController forgetPasswordController =
+        Get.put(ForgetPasswordController());
     SignInController signInController = Get.put(SignInController());
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
@@ -68,7 +71,8 @@ class SignInForm extends StatelessWidget {
                 style: Styles.bodyGrey14,
               ),
               TextButton(
-                onPressed: () => signInController.goToForgetPasswordScreen(),
+                onPressed: () =>
+                    forgetPasswordController.goToForgetPasswordScreen(),
                 child: Text('click_here'.tr),
               ),
             ],

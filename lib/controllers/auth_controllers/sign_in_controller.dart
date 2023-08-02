@@ -8,11 +8,4 @@ class SignInController extends GetxController {
       AppRouter.signUpScreenRoute,
     );
   }
-
-  // navigate to the forget password screen
-  void goToForgetPasswordScreen() {
-    Get.toNamed(
-      AppRouter.forgetPasswordScreenRoute,
-    );
-  }
 }
