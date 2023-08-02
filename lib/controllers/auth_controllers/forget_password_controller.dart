@@ -3,6 +3,6 @@ import 'package:get/get.dart';
 
 class ForgetPasswordController extends GetxController {
   void gotToOtpScreen() {
-    Get.toNamed(AppRouter.otpScreenRoute);
+    Get.toNamed(AppRouter.otpScreenRoute, arguments: true);
   }
 }

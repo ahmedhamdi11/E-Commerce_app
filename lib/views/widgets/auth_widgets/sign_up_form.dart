@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/controllers/auth_controllers/sign_up_controller.dart';
 import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
 import 'package:ecommerce_app/core/shared/widgets/default_button.dart';
 import 'package:ecommerce_app/core/shared/widgets/default_text_field.dart';
@@ -12,6 +13,7 @@ class SignUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpController signUpController = Get.put(SignUpController());
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: Column(
@@ -86,7 +88,7 @@ class SignUpForm extends StatelessWidget {
 
           // sign in button
           DefaultButton(
-            onTap: () {},
+            onTap: () => signUpController.signUp(),
             btnText: 'sign_up'.tr,
           ),
 

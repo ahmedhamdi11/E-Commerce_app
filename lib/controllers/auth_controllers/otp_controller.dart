@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/functions/show_default_snackbar.dart';
 import 'package:ecommerce_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,12 +33,33 @@ class OtpController extends GetxController {
     otpCode = controllers.map((e) => e.text).join();
   }
 
-  // verify the otp code
-  void verifyCode() {
+  // verify the otp code to reset password
+  void verifyEmailToResetPassword() {
     if (formKey.currentState!.validate()) {
       // verify code first ...
       // if it is verified then go to the reset password screen
       Get.offNamed(AppRouter.resetPasswordScreenRoute);
+    } else {
+      autovalidateMode = AutovalidateMode.always;
+      update();
+    }
+  }
+
+  // verify the otp code to register
+  void verifyEmailToRegister() {
+    if (formKey.currentState!.validate()) {
+      // verify code first ...
+      // if it is verified then register the account
+      // then navigate to the sign in screen to sing in
+
+      // show success message in the default snack bar
+      showDefaultSnackBar(
+        title: 'Register Success',
+        message: 'You can now sign in with your email and password',
+      );
+
+      // go to sing in screen
+      Get.offAllNamed(AppRouter.signInScreenRoute);
     } else {
       autovalidateMode = AutovalidateMode.always;
       update();

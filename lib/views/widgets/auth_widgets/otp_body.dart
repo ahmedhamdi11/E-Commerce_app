@@ -9,8 +9,9 @@ import 'otp_form_fields.dart';
 class OTPBody extends StatelessWidget {
   const OTPBody({
     super.key,
+    required this.isResetPassword,
   });
-
+  final bool isResetPassword;
   @override
   Widget build(BuildContext context) {
     OtpController otpController = Get.put(OtpController());
@@ -43,7 +44,9 @@ class OTPBody extends StatelessWidget {
           // sign in button
           DefaultButton(
             onTap: () {
-              otpController.verifyCode();
+              isResetPassword
+                  ? otpController.verifyEmailToResetPassword()
+                  : otpController.verifyEmailToRegister();
             },
             btnText: 'continue'.tr,
           ),
