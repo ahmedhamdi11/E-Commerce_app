@@ -21,6 +21,7 @@ class OtpFormFields extends StatelessWidget {
               SizedBox(
                 width: 50,
                 child: DefaultTextField(
+                  textAlign: TextAlign.center,
                   controller: controller.controllers[i],
                   hint: '0',
                   keyboardType: TextInputType.number,

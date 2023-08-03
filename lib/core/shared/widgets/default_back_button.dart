@@ -11,7 +11,10 @@ class DefaultBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 18.0,
+          vertical: 8.0,
+        ),
         child: MaterialButton(
           color: AppColors.primaryColor.withOpacity(0.9),
           minWidth: 60,

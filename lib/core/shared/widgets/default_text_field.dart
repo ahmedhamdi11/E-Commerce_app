@@ -17,6 +17,7 @@ class DefaultTextField extends StatelessWidget {
     this.inputFormatters,
     this.autovalidateMode,
     this.controller,
+    this.textAlign = TextAlign.start,
   });
   final Widget? suffix;
   final String? hint;
@@ -29,9 +30,11 @@ class DefaultTextField extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final AutovalidateMode? autovalidateMode;
   final TextEditingController? controller;
+  final TextAlign textAlign;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      textAlign: textAlign,
       controller: controller,
       autovalidateMode: autovalidateMode,
       validator: validator,
