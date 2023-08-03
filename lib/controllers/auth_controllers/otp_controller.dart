@@ -54,8 +54,8 @@ class OtpController extends GetxController {
 
       // show success message in the default snack bar
       showDefaultSnackBar(
-        title: 'Register Success',
-        message: 'You can now sign in with your email and password',
+        title: 'success'.tr,
+        message: 'register_success'.tr,
       );
 
       // go to sing in screen

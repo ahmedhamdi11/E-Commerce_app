@@ -5,6 +5,11 @@ class AppTranslations extends Translations {
   Map<String, Map<String, String>> get keys => {
         // arabic translations
         'ar': {
+          // single words ar translations
+          'continue': 'اشطا',
+          'skip': 'تخطي',
+          'success': 'تم بنجاح',
+
           // onboarding ar translation
           // onboarding titls
           'title_1': 'اختر منتجاتك',
@@ -21,10 +26,6 @@ class AppTranslations extends Translations {
               'تم استخدام أفضل أداة تعقب لتتبع طلبك. ستعرف مكان وجود منتجك في الوقت الحالي.',
           'body_4':
               'موثوقة وسرعة التسليم. نقوم بتسليم منتجك بأسرع طريقة ممكنة.',
-
-          //
-          'continue': 'اشطا',
-          'skip': 'تخطي',
 
           // auth ar translations
           'sign_in': 'تسجيل الدخول',
@@ -55,10 +56,34 @@ class AppTranslations extends Translations {
           'new_password_hint': 'أدخل كلمة السر الجديدة',
           'confirm_password_hint': 'أدخل كلمة السر الجديدة مرة أخرى',
           'confirm_password': 'أكد كلمة السر',
+          'password_reset_success': 'تمت إعادة تعيين كلمة المرور الخاصة بك ',
+          'register_success': 'تم انشاء الحساب بنجاح ، يمكنك تسجيل الدخول الآن',
+
+          // input validation translations
+          'cannot_be_empty': 'هذا الحقل لا يمكن ان يكون فارغا',
+          'cannot_be_less': 'لا يمكن أن يكون هذا الحقل أقل من',
+          'cannot_be_grater': 'هذا الحقل لا يمكن أن يكون أكثر من',
+          'not_valid_username': 'اسم مستخدم غير صالح',
+          'not_valid_email': 'بريد إلكتروني غير صالح',
+          'not_valid_phone': 'رقم هاتف غير صالح',
+
+          'password_must_have_number':
+              'يجب أن تحتوي كلمة السر على رقم واحد على الأقل',
+          'password_must_have_uppercase':
+              'يجب أن تحتوي كلمة السر على حرف إنجليزي كبير',
+          'password_must_have_lowercase':
+              'يجب أن تحتوي كلمة السر على حرف إنجليزي صغير ',
+          'must_have_special_character':
+              'يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل',
         },
 
         // english translations
         'en': {
+          // single words en translations
+          'continue': 'Continue',
+          'skip': 'Skip',
+          'success': 'Success',
+
           //  onboarding titls en
           'title_1': 'Choose Your Products',
           'title_2': 'Easy & Safe Payment',
@@ -77,10 +102,6 @@ class AppTranslations extends Translations {
 
           'body_4':
               'Reliable And Fast Delivery. We Deliver your product the fastest way possible.',
-
-          //
-          'continue': 'Continue',
-          'skip': 'Skip',
 
           // auth en translations
           'sign_in': 'Sign In',
@@ -110,6 +131,24 @@ class AppTranslations extends Translations {
           'new_password_hint': 'Enter your new password',
           'confirm_password_hint': 'Enter your new password again',
           'confirm_password': 'Confirm Password',
+          'password_reset_success':
+              'Your password is reset, sign in now with your new password',
+          'register_success': 'Register done successfully, you can sign in now',
+
+          // input validation translations
+          'cannot_be_empty': 'This field cannot be empty',
+          'cannot_be_less': 'This field can\'t be less than',
+          'cannot_be_grater': 'This field can\'t be grater than',
+          'not_valid_username': 'Not valid username',
+          'not_valid_email': 'Not valid email',
+          'not_valid_phone': 'Not valid phone number',
+          'password_must_have_number': 'password must have at least 1 number',
+          'password_must_have_uppercase':
+              'password must have at least 1 uppercase',
+          'password_must_have_lowercase':
+              'password must have at least 1 lowercase',
+          'must_have_special_character':
+              'password must have at least 1 special character',
         },
       };
 }

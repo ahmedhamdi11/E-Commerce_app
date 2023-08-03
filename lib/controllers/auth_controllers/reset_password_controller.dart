@@ -12,9 +12,8 @@ class ResetPasswordController extends GetxController {
       // reset the user password then go to the signin screen
       _goToSignInScreen();
       showDefaultSnackBar(
-        title: 'Success',
-        message:
-            'Your password is reset, you can signIn now with your new password.',
+        title: 'success'.tr,
+        message: 'password_reset_success'.tr,
       );
     } else {
       autovalidateMode = AutovalidateMode.always;

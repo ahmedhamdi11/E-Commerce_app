@@ -8,17 +8,17 @@ String? checkInputValidation({
 }) {
   // if the input is empty
   if (value.isEmpty) {
-    return 'This field cannot be empty';
+    return 'cannot_be_empty'.tr;
   }
 
   // if the input is less than the minLength
   if (value.length < minLength) {
-    return 'can\'t be less than $minLength';
+    return '${'cannot_be_less'.tr} $minLength';
   }
 
   // if the input is grater than the maxLength
   if (value.length > maxLength) {
-    return 'can\'t be grater than $maxLength';
+    return '${'cannot_be_grater'.tr} $maxLength';
   }
 
   // check on the type validation
@@ -27,23 +27,23 @@ String? checkInputValidation({
       if (GetUtils.isUsername(value)) {
         return null;
       } else {
-        return 'Not valid username';
+        return 'not_valid_username'.tr;
       }
     case ValidationType.email:
       if (GetUtils.isEmail(value)) {
         return null;
       } else {
-        return 'Not valid email';
+        return 'not_valid_email'.tr;
       }
     case ValidationType.password:
       if (!value.contains(RegExp(r'[0-9]'))) {
-        return 'password must have at least 1 number';
+        return 'password_must_have_number'.tr;
       } else if (!value.contains(RegExp(r'[A-Z]'))) {
-        return 'password must have at least 1 uppercase';
+        return 'password_must_have_uppercase'.tr;
       } else if (!value.contains(RegExp(r'[a-z]'))) {
-        return 'password must have at least 1 lowercase';
+        return 'password_must_have_lowercase'.tr;
       } else if (!value.contains(RegExp(r'[!@#$%^&*(),.?:{}|<>]'))) {
-        return 'password must have at least 1 special character';
+        return 'must_have_special_character'.tr;
       } else {
         return null;
       }
@@ -51,7 +51,7 @@ String? checkInputValidation({
       if (GetUtils.isPhoneNumber(value)) {
         return null;
       } else {
-        return 'Not valid phone number';
+        return 'not_valid_phone'.tr;
       }
     default:
       return null;
