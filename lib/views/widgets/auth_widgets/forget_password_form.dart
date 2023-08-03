@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/controllers/auth_controllers/forget_password_controller.dart';
+import 'package:ecommerce_app/core/functions/check_input_validation.dart';
 import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
 import 'package:ecommerce_app/core/shared/widgets/default_button.dart';
 import 'package:ecommerce_app/core/shared/widgets/default_text_field.dart';
@@ -37,13 +38,25 @@ class ForgetPasswordForm extends StatelessWidget {
           const SizedBox(height: 68.0),
 
           // email field
-          DefaultTextField(
-            hint: 'signin_3'.tr,
-            labelText: 'email'.tr,
-            keyboardType: TextInputType.emailAddress,
-            suffix: const Icon(
-              Icons.email_outlined,
-              color: AppColors.greyColor,
+          GetBuilder<ForgetPasswordController>(
+            builder: (controller) => Form(
+              key: controller.verifyEmailFormKey,
+              child: DefaultTextField(
+                autovalidateMode: controller.verifyEmailValidateMode,
+                validator: (value) {
+                  return checkInputValidation(
+                    value: value!,
+                    type: ValidationType.email,
+                  );
+                },
+                hint: 'signin_3'.tr,
+                labelText: 'email'.tr,
+                keyboardType: TextInputType.emailAddress,
+                suffix: const Icon(
+                  Icons.email_outlined,
+                  color: AppColors.greyColor,
+                ),
+              ),
             ),
           ),
 
@@ -51,7 +64,7 @@ class ForgetPasswordForm extends StatelessWidget {
 
           // sign in button
           DefaultButton(
-            onTap: () => forgetPasswordController.gotToOtpScreen(),
+            onTap: () => forgetPasswordController.verifyEmailToResetPassword(),
             btnText: 'continue'.tr,
           ),
 
