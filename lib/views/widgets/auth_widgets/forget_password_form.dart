@@ -14,8 +14,7 @@ class ForgetPasswordForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordController forgetPasswordController =
-        Get.put(ForgetPasswordController());
+    ForgetPasswordController forgetPasswordController = Get.find();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: Column(
@@ -40,15 +39,16 @@ class ForgetPasswordForm extends StatelessWidget {
           // email field
           GetBuilder<ForgetPasswordController>(
             builder: (controller) => Form(
-              key: controller.verifyEmailFormKey,
+              key: controller.formKey,
               child: DefaultTextField(
-                autovalidateMode: controller.verifyEmailValidateMode,
+                autovalidateMode: controller.autovalidateMode,
                 validator: (value) {
                   return checkInputValidation(
                     value: value!,
                     type: ValidationType.email,
                   );
                 },
+                autofocus: true,
                 hint: 'signin_3'.tr,
                 labelText: 'email'.tr,
                 keyboardType: TextInputType.emailAddress,
@@ -62,15 +62,13 @@ class ForgetPasswordForm extends StatelessWidget {
 
           const SizedBox(height: 22.0),
 
-          // sign in button
+          // verify email  button
           DefaultButton(
             onTap: () => forgetPasswordController.verifyEmailToResetPassword(),
             btnText: 'continue'.tr,
           ),
 
-          const SizedBox(
-            height: 32.0,
-          ),
+          const SizedBox(height: 32.0),
         ],
       ),
     );

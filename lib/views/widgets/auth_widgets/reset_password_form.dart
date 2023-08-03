@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/controllers/auth_controllers/forget_password_controller.dart';
+import 'package:ecommerce_app/controllers/auth_controllers/reset_password_controller.dart';
 import 'package:ecommerce_app/core/functions/check_input_validation.dart';
 import 'package:ecommerce_app/core/utils/constants/app_colors.dart';
 import 'package:ecommerce_app/core/shared/widgets/default_button.dart';
@@ -16,9 +16,9 @@ class ResetPasswordForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
-      child: GetBuilder<ForgetPasswordController>(
+      child: GetBuilder<ResetPasswordController>(
         builder: (controller) => Form(
-          key: controller.updatePasswordFormKey,
+          key: controller.formKey,
           child: Column(
             children: [
               // sign in text title
@@ -31,7 +31,7 @@ class ResetPasswordForm extends StatelessWidget {
 
               // new password  field
               DefaultTextField(
-                autovalidateMode: controller.updatePasswordValidateMode,
+                autovalidateMode: controller.autovalidateMode,
                 validator: (value) {
                   return checkInputValidation(
                     value: value!,
@@ -47,9 +47,9 @@ class ResetPasswordForm extends StatelessWidget {
                   color: AppColors.greyColor,
                 ),
               ),
-              const SizedBox(
-                height: 16.0,
-              ),
+
+              const SizedBox(height: 16.0),
+
               // confirm password field
               DefaultTextField(
                 hint: 'confirm_password_hint'.tr,
@@ -64,13 +64,11 @@ class ResetPasswordForm extends StatelessWidget {
 
               // reset password button
               DefaultButton(
-                onTap: () => controller.updatePassword(),
+                onTap: () => controller.resetPassword(),
                 btnText: 'continue'.tr,
               ),
 
-              const SizedBox(
-                height: 32.0,
-              ),
+              const SizedBox(height: 32.0),
             ],
           ),
         ),

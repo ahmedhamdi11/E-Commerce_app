@@ -15,7 +15,7 @@ class OtpController extends GetxController {
   late String otpCode; // otp code
 
 // form fields validator
-  String? otpFormValidator(val) {
+  String? otpInputValidator(val) {
     if (val!.isEmpty) {
       return '';
     } else {
@@ -24,10 +24,10 @@ class OtpController extends GetxController {
   }
 
   // on form fields changes
-  onOtpFormFieldsChanges(String val, int i, BuildContext context) {
+  onOtpFormFieldsChanges(String val, int index, BuildContext context) {
     if (val.length == 1) {
       FocusScope.of(context).nextFocus();
-    } else if (val.isEmpty && i > 0) {
+    } else if (val.isEmpty && index > 0) {
       FocusScope.of(context).previousFocus();
     }
     otpCode = controllers.map((e) => e.text).join();
@@ -59,9 +59,8 @@ class OtpController extends GetxController {
       );
 
       // go to sing in screen
-      Get.offNamedUntil(
+      Get.offAllNamed(
         AppRouter.signInScreenRoute,
-        (route) => false,
       );
     } else {
       autovalidateMode = AutovalidateMode.always;

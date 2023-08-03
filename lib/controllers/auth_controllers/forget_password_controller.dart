@@ -3,40 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ForgetPasswordController extends GetxController {
-  GlobalKey<FormState> verifyEmailFormKey = GlobalKey<FormState>();
-  GlobalKey<FormState> updatePasswordFormKey = GlobalKey<FormState>();
-  AutovalidateMode verifyEmailValidateMode = AutovalidateMode.disabled;
-  AutovalidateMode updatePasswordValidateMode = AutovalidateMode.disabled;
-
-  // update the user password with the new password
-  void updatePassword() {
-    if (updatePasswordFormKey.currentState!.validate()) {
-    } else {
-      updatePasswordValidateMode = AutovalidateMode.always;
-      update();
-    }
-  }
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   void verifyEmailToResetPassword() {
-    if (verifyEmailFormKey.currentState!.validate()) {
+    if (formKey.currentState!.validate()) {
       // send the otp code the user email
       // then go to the otp screen to verify the email
-
-      goToOtpScreen();
+      _goToOtpScreen();
     } else {
-      verifyEmailValidateMode = AutovalidateMode.always;
+      autovalidateMode = AutovalidateMode.always;
       update();
     }
   }
 
-  void goToOtpScreen() {
+  void _goToOtpScreen() {
     Get.toNamed(AppRouter.otpScreenRoute, arguments: true);
-  }
-
-  // navigate to the forget password screen
-  void goToForgetPasswordScreen() {
-    Get.toNamed(
-      AppRouter.forgetPasswordScreenRoute,
-    );
   }
 }

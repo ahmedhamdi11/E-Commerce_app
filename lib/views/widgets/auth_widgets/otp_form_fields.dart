@@ -30,7 +30,7 @@ class OtpFormFields extends StatelessWidget {
                     FilteringTextInputFormatter.digitsOnly,
                     LengthLimitingTextInputFormatter(1),
                   ],
-                  validator: (val) => controller.otpFormValidator(val),
+                  validator: (val) => controller.otpInputValidator(val),
                   onChanged: (val) =>
                       controller.onOtpFormFieldsChanges(val, i, context),
                 ),
