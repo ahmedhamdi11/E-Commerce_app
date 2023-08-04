@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/middleware/my_middleware.dart';
 import 'package:ecommerce_app/views/screens/auth/forget_password_screen.dart';
 import 'package:ecommerce_app/views/screens/auth/otp_screen.dart';
 import 'package:ecommerce_app/views/screens/auth/reset_password_screen.dart';
@@ -9,7 +10,6 @@ import '../../views/screens/auth/signup_screen.dart';
 import '../../views/screens/onboarding_screen.dart';
 
 abstract class AppRouter {
-  static const onBoardingRoute = '/onBoarding';
   static const signInScreenRoute = '/signInScreen';
   static const signUpScreenRoute = '/signUpScreen';
   static const forgetPasswordScreenRoute = '/forgetPasswordScreen';
@@ -18,8 +18,9 @@ abstract class AppRouter {
 
   static List<GetPage<dynamic>> getPages = [
     GetPage(
-      name: onBoardingRoute,
+      name: '/',
       page: () => const OnBoardingScreens(),
+      middlewares: [MyMiddleware()],
     ),
     GetPage(
       name: signInScreenRoute,

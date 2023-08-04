@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
       locale: controller.locale,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,
-      initialRoute: AppRouter.onBoardingRoute,
       getPages: AppRouter.getPages,
     );
   }
