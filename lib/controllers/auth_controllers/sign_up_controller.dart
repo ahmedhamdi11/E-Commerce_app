@@ -5,6 +5,13 @@ import 'package:get/get.dart';
 class SignUpController extends GetxController {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  bool isHiddenPassword = true;
+
+  void togglePasswordVisibility() {
+    isHiddenPassword = !isHiddenPassword;
+    update();
+  }
+
   // signIn user
   void signUp() {
     if (formKey.currentState!.validate()) {

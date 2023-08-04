@@ -108,12 +108,18 @@ class SignUpForm extends StatelessWidget {
                     minLength: 8,
                   );
                 },
-                isPassword: true,
+                isPassword: controller.isHiddenPassword,
                 hint: 'singnin_4'.tr,
                 labelText: 'password'.tr,
-                suffix: const Icon(
-                  Icons.lock_open_outlined,
-                  color: AppColors.greyColor,
+                suffix: InkWell(
+                  borderRadius: BorderRadius.circular(16.0),
+                  onTap: () => controller.togglePasswordVisibility(),
+                  child: Icon(
+                    controller.isHiddenPassword
+                        ? Icons.visibility_off
+                        : Icons.visibility,
+                    color: AppColors.greyColor,
+                  ),
                 ),
               ),
 
